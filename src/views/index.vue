@@ -1,28 +1,24 @@
 <template>
   <div class="container">
-    <button @click="appendButton">appendButton</button>
+    <div>index container</div>
+
   </div>
 </template>
 
 <script>
-import Vue from 'vue'
 import button from './button'
 
 export default {
+  extends: button,
   data() {
-    return {};
+    return {
+      loading: true
+    };
   },
-  methods: {
-    appendButton() {
-      const Button = Vue.extend(button)
-      const buttonInstance = new Button()
-      const buttonEl = buttonInstance.$mount()
-      this.$el.appendChild(buttonEl.$el)
-      setTimeout(() => {
-        buttonInstance.loading = true
-      }, 2000)
-    }
-  },
+  methods: {},
+  mounted() {
+    console.log('2222222')
+  }
 };
 </script>
 

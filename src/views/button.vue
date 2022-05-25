@@ -1,7 +1,7 @@
 <template>
   <div class="button">
     <span>button</span>
-    <div v-if="loading" class="loading"></div>
+    <div v-if="loading" class="loading">loading</div>
   </div>
 </template>
 
@@ -11,6 +11,9 @@ export default {
     return {
       loading: false
     }
+  },
+  mounted() {
+    console.log('11111')
   }
 }
 </script>
