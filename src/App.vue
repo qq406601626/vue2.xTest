@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <router-view></router-view>
+    <div ref="box"></div>
   </div>
 </template>
 <script>
